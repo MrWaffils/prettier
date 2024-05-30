@@ -11,7 +11,11 @@ You can configure Prettier via (in order of precedence):
 - A `.prettierrc.js`, or `prettier.config.js` file that exports an object using `export default` or `module.exports` (depends on the [`type`](https://nodejs.org/api/packages.html#type) value in your `package.json`).
 - A `.prettierrc.mjs`, or `prettier.config.mjs` file that exports an object using `export default`.
 - A `.prettierrc.cjs`, or `prettier.config.cjs` file that exports an object using `module.exports`.
-- A `.prettierrc.toml` file.
+- A `.prettierrc.toml` file,
+- "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 
 The configuration file will be resolved starting from the location of the file being formatted, and searching up the file tree until a config file is (or isn’t) found.
 
